@@ -11,16 +11,18 @@
 
 @section('content')
     {{-- Navbar --}}
-    <nav class="navbar">
-        <div class="container-navbar">
-            <a href="{{ url('/') }}" class="navbar-brand">FlowGen</a>
+    <header class="navbar">
+        <nav class="navbar">
+            <div class="container-navbar">
+                <a href="{{ url('/') }}" class="navbar-brand">FlowGen</a>
 
-            <div class="navbar-menu">
-                <button class="btn-primary">Entrar</button>
-                <button class="btn-secondary">Registrar</button>
+                <div class="navbar-menu">
+                    <button class="btn-primary">Entrar</button>
+                    <button class="btn-secondary">Registrar</button>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <div class="container">
         <h1 class="hero-title">
@@ -142,7 +144,7 @@
                 <a href="#" class="footer-link">Privacy Policy</a>
             </div>
         </div>
-        
+
         <div class="divider"></div>
 
         <div class="copyright">
