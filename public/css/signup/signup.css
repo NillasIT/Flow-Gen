@@ -1,0 +1,365 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(5, 11, 25);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    /* centraliza verticalmente */
+    justify-content: center;
+    /* centraliza horizontalmente */
+    height: 100vh;
+    /* ocupa a altura total da tela */
+    padding: 0 40px;
+
+}
+
+.animation {
+    width: 50%;
+}
+
+.animation-in {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+}
+
+.login-link {
+    text-align: center;
+}
+
+.login-link a {
+    color: rgb(154, 123, 221);
+}
+
+.animation {
+    display: flex;
+    flex-direction: column;
+
+
+    padding-right: 100px;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #9b87f5, #33C3F0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 5;
+}
+
+.non-gradient-text {
+    margin-top: 0;
+    color: #94a3b8;
+    font-size: 18px;
+}
+
+.animation-pub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgb(13, 32, 50);
+    color: #94a3b8;
+    border-radius: 10px;
+    padding: 40px;
+    background-color: transparent;
+
+    /* PONTOS DE LUZ GRADIENTES */
+    background-image:
+        radial-gradient(circle at 40% 50%, rgba(0, 153, 255, 0.25) 0%, transparent 60%),
+        /* azul - esquerda centro */
+        radial-gradient(circle at 60% 65%, rgba(154, 123, 221, 0.25) 0%, transparent 60%);
+    /* roxo - direita abaixo */
+
+    background-blend-mode: screen;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(30, 41, 59);
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.info {
+    margin-top: 40px;
+    padding: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(13, 32, 50);
+    color: #94a3b8;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+img {
+    width: 24px;
+    height: 24px;
+}
+
+.info-carousel {
+    width: 100%;
+    height: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Fundo semi-transparente */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-icon {
+    background: linear-gradient(to bottom right, #6a48ff, #00b2ff);
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-icon img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.carousel-content {
+    position: relative;
+    min-height: 100px;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    position: relative;
+}
+
+.carousel-item h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.carousel-item p {
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    background: #334155;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+    background: #a78bfa;
+}
+
+.link {
+    color: #a78bfa;
+    text-decoration: none;
+    text-align: end;
+}
+
+.container-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    /* Adiciona equilíbrio horizontal */
+    height: 100vh;
+    /* Altura total da viewport */
+    padding: 0 20px;
+    /* Reduzir padding horizontal */
+    gap: -10px;
+    /* Espaçamento mais uniforme entre os blocos */
+
+
+    justify-content: center;
+
+    gap: 10px;
+    /* Reduz o espaço entre .animation-in e .signin-form */
+}
+
+.signup-form {
+    width: 48%;
+    /* Mantém a largura */
+    margin: 0;
+    /* Remove margens desnecessárias */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* Espaçamento consistente entre os inputs */
+}
+
+.animation-in {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    /* Ajusta a largura para ocupar menos espaço */
+    padding-right: 50px;
+    /* Reduz o padding para aproximar os elementos */
+    margin: 0;
+    /* Remove margens desnecessárias */
+    gap: 15px;
+    /* Espaçamento uniforme entre os elementos */
+    margin-left: auto;
+    /* Move a div para a direita */
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-group img {
+    position: absolute;
+    left: 15px;
+    /* Posiciona o ícone à esquerda */
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    /* Garante que o ícone não interfira na interação com o input */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 20px;
+    /* Padding geral */
+    padding-left: 50px;
+    /* Adiciona espaço à esquerda para o ícone */
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #6a48ff;
+    /* Cor inicial moderna */
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #33C3F0;
+    /* Cor diferente ao focar */
+    box-shadow: 0 0 8px rgba(51, 195, 240, 0.6);
+    /* Glow moderno */
+    transform: scale(1.02);
+    /* Leve aumento ao focar */
+}
+
+.input-group input:hover {
+    border-color: #9b87f5;
+    /* Cor ao passar o mouse */
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    /* Placeholder com opacidade reduzida */
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus::placeholder {
+    color: transparent;
+    /* Esconde o placeholder ao focar */
+}
+
+.btn-criar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    /* Botão mais compacto */
+    font-size: 16px;
+    /* Aumentar legibilidade */
+    border-radius: 8px;
+    /* Bordas arredondadas mais suaves */
+}
+
+.login-link {
+    margin-top: 10px;
+    /* Reduzir margem superior */
+    font-size: 14px;
+    /* Ajustar tamanho da fonte */
+}
+
+.gradient-text {
+    font-size: 36px;
+    /* Reduzir tamanho do texto */
+    margin-bottom: 10px;
+}
+
+.non-gradient-text {
+    font-size: 16px;
+    /* Ajustar tamanho da fonte */
+    color: #cbd5e1;
+    /* Tom mais claro */
+    text-align: center;
+    /* Centralizar texto */
+}
+
+.carousel-dots .dot {
+    width: 8px;
+    /* Reduzir tamanho dos pontos */
+    height: 8px;
+}
+
+.carousel-dots .dot.active {
+    background: #a78bfa;
+    /* Cor ativa */
+}

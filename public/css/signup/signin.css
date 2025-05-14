@@ -1,0 +1,14 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 30%;
+    max-width: 500px;
+    margin: auto;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: rgb(3, 8, 23);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+}

@@ -60,3 +60,23 @@
     color: #fff;
     scale: 1.05;
 }
+
+.divider {
+    width: 95%;
+    height: 0.5px;
+    background-color: rgb(30, 41, 59);
+    margin-bottom: 40px;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.copyright-text {
+    font-size: 15px;
+    color: #94a3b8;
+    margin-top: 20px;
+}

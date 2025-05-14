@@ -3,7 +3,7 @@
 @section('title', 'Welcome Page')
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('css/welcome/buttons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome/content.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome/cards.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome/footer.css') }}">
@@ -11,18 +11,8 @@
 
 @section('content')
     {{-- Navbar --}}
-    <header class="navbar">
-        <nav class="navbar">
-            <div class="container-navbar">
-                <a href="{{ url('/') }}" class="navbar-brand">FlowGen</a>
+    @include('components.navbar')
 
-                <div class="navbar-menu">
-                    <button class="btn-primary">Entrar</button>
-                    <button class="btn-secondary">Registrar</button>
-                </div>
-            </div>
-        </nav>
-    </header>
 
     <div class="container">
         <h1 class="hero-title">
@@ -37,8 +27,8 @@
         </p>
 
         <div class="buttons">
-            <button class="btn-secondary">Get Started</button>
-            <button class="btn-primary">Learn More</button>
+            <a href="{{ route('register.show') }}" class="btn-secondary">Get Started</a>
+                <a href="#" class="btn-primary">Learn More</a>
         </div>
 
         <div class="stats">
@@ -71,8 +61,8 @@
         </div>
 
         <div class="buttons">
-            <button class="btn-secondary">Criar Conta Gratuita</button>
-            <button class="btn-primary">Entrar</button>
+            <a href="{{ route('register.show') }}" class="btn-secondary">Criar conta gratuita</a>
+                <a href="{{ route('login.show') }}" class="btn-primary">Entrar</a>
         </div>
 
         <div class="features">
@@ -86,7 +76,7 @@
         <div class="cards">
             <div class="card">
                 <div class="img-card">
-                    <img src="{{ asset('assets/icons/settings.png') }}" alt="">
+                    <img src="{{ asset('assets/icons/welcome/settings.png') }}" alt="">
                 </div>
                 <p class="cards-title">Smart Generation</p>
                 <p class="cards-description">Fill in a simple form with your business details, audience, and content goals.
@@ -95,7 +85,7 @@
 
             <div class="card">
                 <div class="img-card">
-                    <img src="{{ asset('assets/icons/copywriting.png') }}" alt="">
+                    <img src="{{ asset('assets/icons/welcome/copywriting.png') }}" alt="">
                 </div>
                 <p class="cards-title">AI Copywriting</p>
                 <p class="cards-description">Our AI analyzes your input and creates optimized copy tailored to your brand's
@@ -104,7 +94,7 @@
 
             <div class="card">
                 <div class="img-card">
-                    <img src="{{ asset('assets/icons/image.png') }}" alt="">
+                    <img src="{{ asset('assets/icons/welcome/image.png') }}" alt="">
                 </div>
                 <p class="cards-title">Carousel Posts</p>
                 <p class="cards-description">Create multi-slide content that educates and engages your audience effectively.
@@ -113,42 +103,12 @@
 
             <div class="card">
                 <div class="img-card">
-                    <img src="{{ asset('assets/icons/search.png') }}" alt="">
+                    <img src="{{ asset('assets/icons/welcome/search.png') }}" alt="">
                 </div>
                 <p class="cards-title">Content Library</p>
                 <p class="cards-description">Access your content history, save favorites, and request variations with a
                     click.</p>
             </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="footer">
-            <div class="footer-flow">
-                <h2 class="footer-flow-title">FlowGen</h2>
-                <p class="footer-flow-description">Transforming how small and medium businesses communicate with their
-                    audience through AI-powered content creation.</p>
-            </div>
-
-            <div class="footer-links">
-                <h2 class="footer-links-title">Platform</h2>
-                <a href="#" class="footer-link">Dashboard</a>
-                <a href="#" class="footer-link">Content Creation</a>
-                <a href="#" class="footer-link">History</a>
-            </div>
-
-            <div class="footer-links">
-                <h2 class="footer-links-title">Company</h2>
-                <a href="#" class="footer-link">About</a>
-                <a href="#" class="footer-link">Contact</a>
-                <a href="#" class="footer-link">Privacy Policy</a>
-            </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="copyright">
-            <p class="copyright-text">© 2025 FlowGen. All rights reserved.</p>
         </div>
     </div>
 @endsection
